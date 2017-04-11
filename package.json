@@ -1,0 +1,26 @@
+{
+  "name": "poem-kata-visual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.5",
+    "brfs": "^1.4.3",
+    "budo": "^9.4.7",
+    "tsify": "^3.0.1",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "@cycle/dom": "^15.2.0",
+    "@cycle/run": "^1.0.0",
+    "@cycle/time": "^0.7.2",
+    "xstream": "^10.2.0"
+  }
+}

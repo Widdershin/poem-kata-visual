@@ -1,0 +1,56 @@
+.challenge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.challenge-word {
+  font-size: 2em;
+}
+
+.challenge-grid {
+  display: table;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+}
+
+.cellular {
+  display: table-cell;
+  font-size: 3em;
+  text-align: center;
+  vertical-align: center;
+  background: pink;
+  padding: 0.3em;
+}
+
+.row .cellular {
+  padding: 0.5em;
+}
+
+.rowular {
+  display: table-row;
+}
+
+
+.cell input {
+  width: 2em;
+  font-size: 3em;
+  margin: 0.1em;
+}
+
+
+.cellular.valid {
+  background: lightgreen;
+}
+
+
+.cellular.blank {
+  background: white;
+}
+
