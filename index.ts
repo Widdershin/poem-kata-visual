@@ -8,7 +8,7 @@ import * as fs from 'fs';
 const WORDS = new Set(fs.readFileSync('./words.txt', 'utf-8').split('\n').map(word => word.toUpperCase().trim()).filter(word => word !== ''));
 
 const drivers = {
-  DOM: makeDOMDriver('body')
+  DOM: makeDOMDriver(document.body)
 }
 
 function renderChallengeGrid (word, {challenge, rows, columns}) {
