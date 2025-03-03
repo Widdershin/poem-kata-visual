@@ -20,7 +20,7 @@ function renderChallengeGrid (word, {challenge, rows, columns}) {
         div('.row', [
           div('.cellular', {class: {valid: rows[rowIndex]}}, rows[rowIndex] ? '😊': '😞'),
 
-          ...row.map((value, columnIndex) => div('.cell', [input({props: {value}, dataset: {rowIndex: rowIndex.toString(), columnIndex: columnIndex.toString()}})]))
+          ...row.map((value, columnIndex) => div('.cell', [input({props: {value, disabled: rowIndex === 0}, class: {disabled: rowIndex == 0}, dataset: {rowIndex: rowIndex.toString(), columnIndex: columnIndex.toString()}})]))
         ])
       )
     ])
@@ -75,7 +75,7 @@ function main (sources) {
       const size = word.length;
       const challenge = new Array(size).fill('').map(() => new Array(size).fill(''));
 
-      challenge[0] = word.split('');
+      challenge[0] = word.toUpperCase().split('');
 
       return challenge;
     }
@@ -89,11 +89,7 @@ function main (sources) {
         const row = ev.target.dataset.rowIndex;
         const column = ev.target.dataset.columnIndex;
 
-        console.log(row, column);
-
         challenge[row][column] = ev.target.value.toUpperCase();
-
-        console.log(challenge);
 
         return challenge;
       }
